@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 
 /** Use routes to controller methods */
 
-// app.use("/conversor", require("./routes/conversor.route"));
+app.use("/conversor", require("./routes/conversion.route"));
 
 /** Run server */
 app.listen(app.get("port"), () => {

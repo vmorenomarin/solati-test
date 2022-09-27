@@ -7,7 +7,7 @@ conversorCtrl.getCurrency = async (req, res) => {
   try {
     const { from_currency, to_currency, amount } = req.params;
     const conversion = await axios.get(
-      `https://apilayer.net/api/convert?${access_key}&from=${from_currency}&to=${to_currency}&amount=${amount}`
+      `https://apilayer.net/api/convert?access_key=${access_key}&from=${from_currency}&to=${to_currency}&amount=${amount}`
     );
     if (conversion) {
       return res.status(200).json({
