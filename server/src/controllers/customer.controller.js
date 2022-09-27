@@ -68,13 +68,11 @@ customerCtrl.login = async (req, res) => {
     const { email, password } = req.body;
     const customer = await customerModel.findOne({ email });
     if (!customer) {
-      return generalMessage(
-        res,
-        404,
-        "",
-        false,
-        `User with ${email} not found.`
-      );
+      return  res.status(404).json({
+        ok: false,
+        data: "",
+        message: `User with ${email} not found.`
+      });
     }
     const response = bcrypt.compareSync(password, customer.password);
     if (response) {
