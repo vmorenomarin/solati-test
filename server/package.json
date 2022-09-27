@@ -4,7 +4,8 @@
   "description": "Solati test",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
