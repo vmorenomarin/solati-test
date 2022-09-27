@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 
-// require("./database");
+require("./database");
 const app = express();
 
 app.set("port", 4000);
