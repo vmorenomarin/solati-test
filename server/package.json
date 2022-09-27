@@ -2,6 +2,7 @@
   "name": "solati-server",
   "version": "1.0.0",
   "description": "Solati test",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "test",
@@ -20,6 +21,7 @@
   "author": "Victor Moreno Marin",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -31,4 +33,5 @@
     "nodemon": "^2.0.15",
     "uuid": "^8.3.2"
   }
+ 
 }
