@@ -4,16 +4,16 @@ const { Schema, model } = mongoose;
 /** Returns a operations schema. */
 const operationSchema = new Schema(
   {
-    from_currancy: {
+    from_currency: {
       type: String,
       required: true,
     },
-    to_curraancy: {
+    to_currency: {
       type: String,
       required: true,
     },
     result_convertion: {
-      type: number,
+      type: Number,
       required: true,
     },
     customer: {

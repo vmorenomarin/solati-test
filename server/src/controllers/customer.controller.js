@@ -99,7 +99,8 @@ customerCtrl.login = async (req, res) => {
   }
 };
 
-customerCtrl.convert = async (req, res) => {
+customerCtrl.operations= async (req, res) => {
+
   
 };
 module.exports = customerCtrl;

@@ -21,7 +21,7 @@ app.use(cors({ origin: "*" }));
 app.use(morgan("dev"));
 
 /** Use routes to controller methods */
-app.use("/conversor", require("./routes/conversion.route"));
+app.use("/conversor", require("./routes/operation.route"));
 app.use("/customer", require("./routes/customer.route"));
 
 /** Run server */
