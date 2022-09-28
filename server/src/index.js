@@ -17,16 +17,14 @@ app.use(express.json());
 /** Cross-Origin Resource Sharing. Enable share resources between two domains/servers. */
 app.use(cors({ origin: "*" }));
 
-
 /**  HTTP request logger */
 app.use(morgan("dev"));
 
 /** Use routes to controller methods */
-
 app.use("/conversor", require("./routes/conversion.route"));
 app.use("/customer", require("./routes/customer.route"));
 
 /** Run server */
 app.listen(app.get("port"), () => {
-    console.log(`Server running in ${app.get("port")} port.`);
-  });
+  console.log(`Server running in ${app.get("port")} port.`);
+});

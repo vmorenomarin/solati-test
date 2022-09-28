@@ -68,10 +68,10 @@ customerCtrl.login = async (req, res) => {
     const { email, password } = req.body;
     const customer = await customerModel.findOne({ email });
     if (!customer) {
-      return  res.status(404).json({
+      return res.status(404).json({
         ok: false,
         data: "",
-        message: `User with ${email} not found.`
+        message: `User with ${email} not found.`,
       });
     }
     const response = bcrypt.compareSync(password, customer.password);
@@ -99,4 +99,7 @@ customerCtrl.login = async (req, res) => {
   }
 };
 
+customerCtrl.convert = async (req, res) => {
+  
+};
 module.exports = customerCtrl;
