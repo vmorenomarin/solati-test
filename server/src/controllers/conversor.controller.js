@@ -1,18 +1,19 @@
-const axios = require("axios");
-// import axios from "axios"
+const axios = require("axios").default;
 const conversorCtrl = {};
-var access_key = "DFFDFJ1Oax7wIpaJ4b7HQBeEvcU3E8sj"; // Hide this line on producction in enviroment file
+var access_key = "iTclYlua9ZdEp2qxwkXm1j3My3yaFicp"; // Hide this line on producction in enviroment file
 
+const options = { headers: { apikey: access_key } };
 conversorCtrl.getCurrency = async (req, res) => {
   try {
-    const { from_currency, to_currency, amount } = req.params;
-    const conversion = await axios.get(
-      `https://apilayer.net/api/convert?access_key=${access_key}&from=${from_currency}&to=${to_currency}&amount=${amount}`
+    const { from_currency, to_currency, amount } = req.query;
+    const { data } = await axios.get(
+      `https://api.apilayer.com/currency_data/convert?to=${to_currency}&from=${from_currency}&amount=${amount}`,
+      options
     );
-    if (conversion) {
+    if (data) {
       return res.status(200).json({
         ok: true,
-        data: conversion,
+        data: data.result,
         message: "Succesfully Conversion.",
       });
     }

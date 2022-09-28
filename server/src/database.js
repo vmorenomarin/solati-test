@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb://localhost/solati";
+const URI = "mongodb://127.0.0.1/solati-test";
 
 mongoose
   .connect(URI, {
@@ -9,8 +9,8 @@ mongoose
     
   })
   .then((db) =>
-    console.log("Database connected in collection", db.connection.name)
+    console.log(`Database connected in collection ${db.connection.name}.`)
   )
-  .catch((error) => console.log("Cannot connect to database.", error.message));
+  .catch((error) => console.log("Cannot connect to database:", error.message));
 
 module.exports = mongoose;
