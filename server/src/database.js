@@ -6,7 +6,6 @@ mongoose
   .connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    
   })
   .then((db) =>
     console.log(`Database connected in collection ${db.connection.name}.`)
