@@ -22,3 +22,17 @@ h3 {
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 40%);
   border-radius: 20px;
 }
+
+.btn-solati {
+  background-color: var(--second-accent-color);
+  color: var(--main-bg-color);
+}
+
+.btn-solati:hover{
+  background-color: var(--main-accent-color);
+  /* color: var(--text-color); */
+}
+
+.icon-color {
+  color: var(--main-accent-color);
+}

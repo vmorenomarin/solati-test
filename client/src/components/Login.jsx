@@ -45,12 +45,12 @@ export const Login = () => {
               <div className="card-header fw-bold">
                 <div className="row justify-content-evenly align-items-center">
                   <div className="col-6">
-                    Inicio de sesión{" "}
+                    Iniciar sesión
                     <i className="fa-solid fa-right-to-bracket"></i>
                   </div>
                   <div className="col-6 small">
                     ¿No tienes cuenta?
-                    <NavLink to="/register"> Registro</NavLink>
+                    <NavLink to="/register" className="icon-color"> Registrarse</NavLink>
                   </div>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export const Login = () => {
                   />
                   <button
                     type="submit"
-                    className="btn btn-warning form-control mt-3"
+                    className="btn btn-solati form-control mt-3"
                   >
                     Iniciar sesión
                   </button>

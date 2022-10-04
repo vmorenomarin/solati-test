@@ -52,7 +52,7 @@ export const Register = () => {
                   </div>
                   <div className="col-6 small">
                     ¿Ya tienes cuenta?
-                    <NavLink to="/login"> Iniciar sesión</NavLink>
+                    <NavLink to="/login" className="icon-color"> Iniciar sesión</NavLink>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export const Register = () => {
                   />
                   <button
                     type="submit"
-                    className="btn btn-warning form-control mt-3"
+                    className="btn btn-solati form-control mt-3"
                   >
                     Crear Cuenta
                   </button>

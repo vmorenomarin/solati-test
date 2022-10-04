@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Chat } from "./components/Chat.jsx";
+import { Home } from "./components/Home.jsx";
 import { Login } from "./components/Login";
 import { Navbar } from "./components/Navbar";
 import { Operations } from "./components/Operations";
@@ -26,8 +27,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/chat" element={Private(<Chat/>)} />
-        {/* <Route path="/" element={<Main />} /> */}
+        {/* <Route path="/chat" element={Private(<Chat/>)} /> */}
+        <Route path="/" element={(<Home/>)} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/operations/:id" element={Private(<Operations/>)} />

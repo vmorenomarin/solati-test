@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useCallback } from "react";
 import { useState } from "react";
 import { useUser } from "../context/UserContext";
+import { Chat } from "./Chat";
 
 export const Operations = () => {
   const { user } = useUser();
@@ -34,7 +35,7 @@ export const Operations = () => {
         <table
           className="table table-striped
             table-hover	
-            table-primary
+           
             align-middle"
         >
           <thead className="table-light">
@@ -60,6 +61,7 @@ export const Operations = () => {
           <tfoot></tfoot>
         </table>
       </div>
+      <Chat />
     </div>
   );
 };

@@ -24,10 +24,10 @@ export const Navbar = () => {
           </button>
           {user.login ? (
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <ul className="navbar-nav me-auto mb-2 mb-large-0">
+              {/* <ul className="navbar-nav me-auto mb-2 mb-large-0">
                 <li className="nav-item dropdown">
                   <NavLink
-                    className="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle icon-color"
                     data-bs-toggle="dropdown"
                     to="/"
                     role="button"
@@ -49,25 +49,25 @@ export const Navbar = () => {
                     </li>
                   </ul>
                 </li>
-              </ul>
-              <ul className="navbar-nav ml-auto">
+              </ul> */}
+              <ul className="navbar-nav ms-auto">
                 <li className="nav-item me-3">
                   <NavLink
-                    className="nav-link"
-                    to="/operations"
+                    className="nav-link text-secondary"
+                    to={"/operations/"+user.id}
                     activeClassName="active"
                   >
-                    <i className="bi bi-person"></i> Bienvenido, {user.email}
+                    <i className="fa fa-user"></i> Bienvenido, {user.email}
                   </NavLink>
                 </li>
                 <li className="nav-item mr-3">
                   <NavLink
-                    className="nav-link"
+                    className="nav-link icon-color"
                     to="/"
                     activeClassName="active"
                     onClick={() => exit()}
                   >
-                    Cerar sesión <i className="bi bi-box-arrow-right"></i>
+                    Cerar sesión <i className="fa fa-sign-out"></i>
                   </NavLink>
                 </li>
               </ul>
@@ -77,17 +77,17 @@ export const Navbar = () => {
               <ul className="navbar-nav ms-auto mb-2 mb-large-0">
                 <li className="nav-item me-3">
                   <NavLink
-                    className="nav-link"
+                    className="nav-link text-secondary"
                     to="/login"
                     activeClassName="active"
                   >
-                    Iniciar sesión <i className="bi bi-box-arrow-in-right"></i>
+                    Iniciar sesión <i className="fa fa-right-to-bracket"></i>
                   </NavLink>
                 </li>
 
                 <li className="nav-item me-3">
-                  <NavLink className="nav-link" to="/register">
-                    Registrarse <i className="bi bi-person"></i>
+                  <NavLink className="nav-link text-secondary" to="/register">
+                    Registrarse <i className="fa-solid fa-user-plus secondary"></i>
                   </NavLink>
                 </li>
               </ul>

@@ -3,6 +3,8 @@ import React, { useCallback, useEffect } from "react";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import { useUser } from "../context/UserContext";
+const logo = require("../assets/images/solati-logo-sm.png");
+
 
 export const Chat = () => {
   const { user } = useUser();
@@ -26,7 +28,7 @@ export const Chat = () => {
     const re = /convertir\s([0-9]+)\s([a-zA-Z]{3})\sa\s([a-zA-Z]{3})/i;
     if (!re.test(newMessage)) {
       addResponseMessage(
-        "Te sugerimos que escribas la solicitud de conversión como te sugeremimos en el mensaje anterior."
+        "Escribe la solicitud de conversión como te sugeremimos en el mensaje anterior."
       );
       addResponseMessage("Sugerencia: Convertir 3000 COP a USD");
     }
@@ -47,7 +49,7 @@ export const Chat = () => {
   return (
     <Widget
       handleNewUserMessage={handleNewUserMessage}
-      //   profileAvatar={logo}
+      profileAvatar={logo}
       title="Conversor de Monedas"
       subtitle="Agrega una consulta"
     />
