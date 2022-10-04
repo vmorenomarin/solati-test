@@ -1,11 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+var path = require("path")
+
+const { PORT } = process.env;
 
 require("./database");
 const app = express();
 
-app.set("port", 4000);
+app.set("port", PORT);
+// app.set("port", 4000);
 
 /** Middlewares */
 /**  Parse incoming requests with urlencoded payloads */
