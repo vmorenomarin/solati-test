@@ -1,6 +1,7 @@
 // require("dotenv").config();
 const customerCtrl = {};
 const customerModel = require("../models/customer.model");
+const operationModel = require("../models/operation.model");
 const jsw = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const auth = require("../middlewares/auth.middleware");
@@ -81,8 +82,8 @@ customerCtrl.login = async (req, res) => {
       });
       return res.status(201).json({
         ok: true,
-        data: token,
-        message: `User account created. Welcome ${customer.email}`,
+        data: { token, id: customer._id, email: customer.email },
+        message: `Welcome ${customer.email}`,
       });
     }
     res.status(500).json({
@@ -99,8 +100,5 @@ customerCtrl.login = async (req, res) => {
   }
 };
 
-customerCtrl.operations= async (req, res) => {
 
-  
-};
 module.exports = customerCtrl;

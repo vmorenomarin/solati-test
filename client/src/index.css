@@ -2,9 +2,23 @@
   --main-bg-color: #F8F8F8;
   --main-accent-color: #dc832d;
   --second-accent-color: #486898;
-  --text-color: #4e4e4e; 
+  --text-color: #4e4e4e;
 }
 
 body {
   background-color: var(--main-bg-color);
+}
+
+h1 {
+  color: var(--main-accent-color)
+}
+
+h3 {
+  color: var(--text-color);
+}
+
+.card-widget {
+  color: var(--second-accent-color);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 40%);
+  border-radius: 20px;
 }

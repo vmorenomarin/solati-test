@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 import App from "./App";
+import { UserProvider } from "./context/UserContext";
+import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:4000";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+ReactDOM.render(
+  <UserProvider>
     <App />
-  </React.StrictMode>
+  </UserProvider>,
+  document.getElementById("root")
 );

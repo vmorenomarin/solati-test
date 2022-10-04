@@ -35,4 +35,25 @@ operationCtrl.getCurrency = async (req, res) => {
   }
 };
 
+operationCtrl.operations = async (req, res) => {
+  try {
+    const { user_id } = req.query;
+    const data = await operationModel.find({ customer: user_id });
+    // .populate("customer", { password: 0 });
+    if (data) {
+      return res.status(200).json({
+        ok: true,
+        data: data,
+        message: `Data found for user ${user_id}`,
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({
+      ok: false,
+      data: "",
+      message: error.message,
+    });
+  }
+};
+
 module.exports = operationCtrl;

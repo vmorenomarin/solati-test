@@ -11,6 +11,10 @@ const operationSchema = new Schema(
     to_currency: {
       type: String,
       required: true,
+      amount: {
+        type: Number,
+        required: true,
+      },
     },
     result_convertion: {
       type: Number,
