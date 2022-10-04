@@ -10,6 +10,7 @@ export const Operations = () => {
   //   const { user_id } = useParams();
   const options = { headers: { authorization: "Bearer " + user.token } };
   const [operations, setOperations] = useState([]);
+  
   const getUserOperations = useCallback(async () => {
     try {
       const { data } = await axios.get(
