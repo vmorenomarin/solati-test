@@ -33,8 +33,7 @@ export const Login = () => {
             <div className="header-2">
               <h1 className="fw-bold">Currency Exchange</h1>
               <h3>
-                Inicia sesión y haz cosultas sobre cambios de moneda y obtén tu
-                registro de consultas.
+                Inicia sesión, haz conversiones de moneda y obtén tu registro de consultas.
               </h3>
             </div>
           </div>

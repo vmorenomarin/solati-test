@@ -36,8 +36,7 @@ export const Register = () => {
             <div className="header-2">
               <h1 className="fw-bold">Currency Exchange</h1>
               <h3>
-                Crea una cuenta y haz cosultas sobre cambios de moneda y obtén
-                tu registro de consultas.
+                Crea una cuenta, haz conversiones de moneda y obtén tu registro de consultas.
               </h3>
             </div>
           </div>
