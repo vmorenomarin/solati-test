@@ -37,6 +37,7 @@ You must installed a MongoDB server in your operative system to get a successful
 2. Install Dependencies:
 
 > npm i
+> npm i react-client-widget --force
 
 ## Run
 
