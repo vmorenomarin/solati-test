@@ -43,7 +43,7 @@ export const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <NavLink to="/actions" className="dropdown-item">
+                      <NavLink to="/chat" className="dropdown-item">
                         Nueva consulta
                       </NavLink>
                     </li>

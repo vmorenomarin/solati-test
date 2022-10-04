@@ -25,7 +25,7 @@ export const Operations = () => {
 
   useEffect(() => {
     getUserOperations();
-  }, []);
+  });
 
   return (
     <div className="container">
