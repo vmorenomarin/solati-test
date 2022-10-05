@@ -1,15 +1,16 @@
-require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+<<<<<<< HEAD
 
 const { PORT } = process.env;
+=======
+>>>>>>> parent of 62fd48a... Deployment settings.
 
 require("./database");
 const app = express();
 
-app.set("port", PORT);
-// app.set("port", 4000);
+app.set("port", 4000);
 
 /** Middlewares */
 /**  Parse incoming requests with urlencoded payloads */

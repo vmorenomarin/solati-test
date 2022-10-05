@@ -1,8 +1,7 @@
-require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const customerModel = require("../models/customer.model");
 
-const {secret} = process.env;
+const secret = "Soy_Batman";
 
 const verifyToken = (req, res, next) => {
   console.log(req.headers.authorization)
