@@ -2,8 +2,11 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const { PORT } = process.env;
+=======
+>>>>>>> parent of 62fd48a... Deployment settings.
 =======
 >>>>>>> parent of 62fd48a... Deployment settings.
 
